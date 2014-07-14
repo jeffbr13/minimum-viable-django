@@ -34,9 +34,6 @@ project path to the `site-directory` for you::
     $ cd PROJECT_NAME
     $ pip install django
     $ django-admin.py startproject --template=https://github.com/jeffbr13/minimum-viable-django/archive/master.zip --extension=py,rst,html PROJECT_NAME ./
-    $ mv ./PROJECT_NAME ./PROJECT_NAME1
-    $ mv ./PROJECT_NAME1/* ./
-    $ rm -rf ./PROJECT_NAME1
 
 
 Installation of Dependencies
