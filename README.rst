@@ -29,11 +29,14 @@ In Linux and Mac OSX, you can install virtualenvwrapper (http://virtualenvwrappe
 which will take care of managing your virtual environments and adding the
 project path to the `site-directory` for you::
 
-    $ mkdir PROJECTNAME
-    $ mkvirtualenv -a PROJECTNAME -p $(which python3) ENVNAME
-    $ cd PROJECTNAME
+    $ mkdir PROJECT_NAME
+    $ mkvirtualenv -a PROJECT_NAME -p $(which python3) ENVNAME
+    $ cd PROJECT_NAME
     $ pip install django
-    $ django-admin.py startproject --template=https://github.com/jeffbr13/minimum-viable-django/archive/master.zip --extension=py,rst,html PROJECTNAME
+    $ django-admin.py startproject --template=https://github.com/jeffbr13/minimum-viable-django/archive/master.zip --extension=py,rst,html PROJECT_NAME ./
+    $ mv ./PROJECT_NAME ./PROJECT_NAME1
+    $ mv ./PROJECT_NAME1/* ./
+    $ rm -rf ./PROJECT_NAME1
 
 
 Installation of Dependencies
@@ -51,6 +54,13 @@ For production::
 
 *note: We install production requirements this way because many Platforms as a
 Services expect a requirements.txt file in the root of projects.*
+
+
+Database Setup
+==============
+
+Before you can add any data, you need to set up a database for your project
+
 
 
 Follows Best Practices
