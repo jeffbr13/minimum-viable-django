@@ -10,6 +10,7 @@ To use this project follow these steps:
 #. Create your working environment
 #. Install Django
 #. Create the new project using the django-two-scoops template
+#. Set up the database
 #. Install additional dependencies
 #. Use the Django admin to create the project
 
