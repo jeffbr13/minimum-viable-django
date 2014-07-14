@@ -56,8 +56,9 @@ Services expect a requirements.txt file in the root of projects.*
 Database Setup
 ==============
 
-Before you can add any data, you need to set up a database for your project
+Skip this step if you already have a database setup or preconfigured.
 
+    $ createdb PROJECT_NAME
 
 
 Follows Best Practices
