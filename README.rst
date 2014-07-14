@@ -32,7 +32,6 @@ project path to the `site-directory` for you::
 
     $ mkdir PROJECT_NAME
     $ mkvirtualenv -a PROJECT_NAME -p $(which python3) ENVNAME
-    $ cd PROJECT_NAME
     $ pip install django
     $ django-admin.py startproject --template=https://github.com/jeffbr13/minimum-viable-django/archive/master.zip --extension=py,rst,html PROJECT_NAME ./
 
