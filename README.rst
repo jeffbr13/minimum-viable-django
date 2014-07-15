@@ -61,6 +61,16 @@ Skip this step if you already have a database setup or preconfigured.
     $ createdb PROJECT_NAME
 
 
+Configure Django Settings
+=========================
+
+#. Set `DATABASE_USER` and `DATABASE_PASSWORD` in `.env`
+#. Set `Admins` in `base.py`
+#. Configure production settings
+  #. `ALLOWED_HOSTS`
+  #. Email SMTP settings
+
+
 Follows Best Practices
 ======================
 

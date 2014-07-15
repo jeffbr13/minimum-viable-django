@@ -1,7 +1,7 @@
 """Development settings and globals."""
 
-from __future__ import absolute_import
-
+from getpass import getuser
+from os import environ
 from os.path import join, normpath
 
 from .base import *
@@ -26,12 +26,12 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': normpath(join(DJANGO_ROOT, 'default.db')),
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': '{{ project_name }}',
+        'USER': str(environ.get('DATABASE_USER', getuser())),
+        'PASSWORD': str(environ.get('DATABASE_PASSWORD', '')),
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 ########## END DATABASE CONFIGURATION
