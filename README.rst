@@ -12,8 +12,8 @@ To use this project follow these steps:
 #. Create the new project using the minimum-viable-django template
 #. Set up the database
 #. Install additional dependencies
-#. Use the Django admin to create the project
-
+#. Use the Django admin to create the project (`python {{ project_name}}/manage.py startapp`)
+#. Run the Django server
 
 Working Environment
 ===================
@@ -69,6 +69,12 @@ Configure Django Settings
 #. Configure production settings
   #. `ALLOWED_HOSTS`
   #. Email SMTP settings
+
+
+Run Server
+==========
+
+    $ honcho start
 
 
 Follows Best Practices
