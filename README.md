@@ -7,13 +7,13 @@ taste.
 
 To use this project follow these steps:
 
-#. Create your working environment
-#. Install Django
-#. Create the new project using the minimum-viable-django template
-#. Set up the database
-#. Install additional dependencies
-#. Use the Django admin to create the project (`python {{ project_name}}/manage.py startapp`)
-#. Run the Django server
+1. Create your working environment
+1. Install Django
+1. Create the new project using the minimum-viable-django template
+1. Set up the database
+1. Install additional dependencies
+1. Use the Django admin to create the project (`python {{ project_name}}/manage.py startapp`)
+1. Run the Django server
 
 
 Working Environment
@@ -68,11 +68,11 @@ Skip this step if you already have a database setup or preconfigured.
 Configure Django Settings
 =========================
 
-#. Set `DATABASE_USER` and `DATABASE_PASSWORD` in `.env`
-#. Set `Admins` in `base.py`
-#. Configure production settings
-  #. `ALLOWED_HOSTS`
-  #. Email SMTP settings
+1. Set `DATABASE_USER` and `DATABASE_PASSWORD` in `.env`
+1. Set `Admins` in `base.py`
+1. Configure production settings
+  1. `ALLOWED_HOSTS`
+  1. Email SMTP settings
 
 
 Run Server
