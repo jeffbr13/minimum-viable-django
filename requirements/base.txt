@@ -4,4 +4,3 @@ django-model-utils
 Django
 gunicorn
 psycopg2
-South
