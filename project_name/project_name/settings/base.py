@@ -3,7 +3,7 @@
 from os.path import abspath, basename, dirname, join, normpath
 from sys import path
 
-from . import get_env_setting
+from . import get_env_setting, load_environment_variables
 
 
 ########## PATH CONFIGURATION
@@ -19,7 +19,19 @@ SITE_NAME = basename(DJANGO_ROOT)
 # Add our project to our pythonpath, this way we don't need to type our project
 # name in our dotted import paths:
 path.append(DJANGO_ROOT)
+
+# Project root path:
+PROJECT_ROOT = dirname(SITE_ROOT)
 ########## END PATH CONFIGURATION
+
+
+########## ENVIRONMENT VARIABLE CONFIGURATION
+# .env file path:
+ENV_PATH = join(PROJECT_ROOT, '.env')
+
+# Force-load .env environment variables:
+load_environment_variables(ENV_PATH)
+########## END ENVIRONMENT VARIABLE CONFIGURATION
 
 
 ########## DEBUG CONFIGURATION
