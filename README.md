@@ -37,7 +37,7 @@ project path to the `site-directory` for you:
     $ mkdir PROJECT_NAME
     $ mkvirtualenv -a PROJECT_NAME -p $(which python3) ENVNAME
     $ pip install django
-    $ django-admin.py startproject --template=https://github.com/jeffbr13/minimum-viable-django/archive/master.zip --extension=py,rst,html --name=.env PROJECT_NAME ./
+    $ django-admin.py startproject --template=https://github.com/jeffbr13/minimum-viable-django/archive/master.zip --extension=py,rst,html --name=.env,Procfile PROJECT_NAME ./
 
 
 Installing Project Dependencies
