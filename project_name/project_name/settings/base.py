@@ -125,6 +125,11 @@ FIXTURE_DIRS = (
 ########## END FIXTURE CONFIGURATION
 
 
+########## TESTRUNNER CONFIGURATION
+TEST_RUNNER = 'django.test.runner.DiscoverRunner'
+########## END TESTRUNNER CONFIGURATION
+
+
 ########## TEMPLATE CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#template-context-processors
 TEMPLATE_CONTEXT_PROCESSORS = (
