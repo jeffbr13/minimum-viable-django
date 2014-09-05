@@ -14,20 +14,19 @@ def get_env_setting(setting):
         raise ImproperlyConfigured(error_msg)
 
 
-+def load_environment_variables(envfile_path):
-+    """
-+    Load key-value pairs from an `autoenv`_-style env file (a.k.a. shell script) into the local environment.
-+
-+    .. _`autoenv`: https://github.com/kennethreitz/autoenv
-+    """
-+    try:
-+        with open(envfile_path) as envfile:
-+            lines = envfile.readlines()
-+            for line in lines:
-+                if 'export' in line:
-+                    key, value = line[len('export '):].split('=', maxsplit=1)
-+                    environ[key.strip()] = value.strip().strip('"')
-+    except IOError:
-+        msg = 'Could not load environment variables from "%s"' % envfile_path
-+        raise ImproperlyConfigured(msg)
-+
+def load_environment_variables(envfile_path):
+    """
+    Load key-value pairs from an `autoenv`_-style env file (a.k.a. shell script) into the local environment.
+
+    .. _`autoenv`: https://github.com/kennethreitz/autoenv
+    """
+    try:
+        with open(envfile_path) as envfile:
+            lines = envfile.readlines()
+            for line in lines:
+                if 'export' in line:
+                    key, value = line[len('export '):].split('=', maxsplit=1)
+                    environ[key.strip()] = value.strip().strip('"')
+    except IOError:
+        msg = 'Could not load environment variables from "%s"' % envfile_path
+        raise ImproperlyConfigured(msg)
